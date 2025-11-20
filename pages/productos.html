@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/stilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>Nuestros Poductos</title>   
+      
+ </head>
+ <body>
+
+   <header class="container  py-5">
+      <div class="logo">
+        <img src="../assets/img/logo.png" alt="Logo Café Pressé">
+      
+      </div>
+
+      <!-- NAV con clase "menu" -->
+          <nav class="menu">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+
+            <!-- SUBMENÚ 1 -->
+            <li class="tiene-submenu">
+              <a href="">Productos</a>
+              <ul class="submenu">
+                <li><a href="productos.html">Café</a></li>
+                <li><a href="combos.html">Combos</a></li>
+              </ul>
+            </li>
+
+            <!-- SUBMENÚ 2 -->
+            <li class="tiene-submenu">
+              <a href="">Sobre nosotros</a>
+              <ul class="submenu">
+                <li><a href="sobrenosotros.html">Historia</a></li>
+                <li><a href="locales.html">Locales</a></li>
+              </ul>
+            </li>
+
+            <li><a href="contacto.html">Contactanos</a></li>
+            <li><a href="fyq.html">FAQ</a></li>
+          </ul>
+      </nav>
+
+      <!-- Ícono hamburguesa -->
+      <i class="fa-solid fa-bars hamburguesa"></i>
+    </header>
+
+  <main class="container">
+      
+      <!-- HERO -------------------------------------------------------------->
+      <section class="text-center mb-5">
+        <h1>Nuestros Cafés</h1>
+        <p class="text-muted w-75 mx-auto">
+          Variedades seleccionadas, tostadas artesanalmente y listas para acompañar tus mejores momentos.
+        </p>
+      </section>
+
+
+      <!-- FILTROS / CATEGORÍAS ---------------------------------------------->
+      <section class="text-center mb-5">
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <button class="btn btn-outline-dark">Todos</button>
+          <button class="btn btn-outline-dark">Blend Intenso</button>
+          <button class="btn btn-outline-dark">De Origen</button>
+          <button class="btn btn-outline-dark">Tostado Suave</button>
+        </div>
+      </section>
+
+
+      <!-- PRODUCTOS ---------------------------------------------------------->
+      <section class="productos">
+        <div class="row g-4">
+
+          <!-- PRODUCTO -->
+          <article class="col-md-4 col-sm-6">
+            <div class="card h-100 shadow-sm">
+              <img src="../assets/img/blendintenso.jpg" class="card-img-top" alt="Blend intenso">
+              <div class="card-body text-center">
+                <h5 class="card-title">Blend Intenso</h5>
+                <p class="card-text">Aroma fuerte, notas de cacao y final persistente.</p>
+                <button class="btn btn-dark w-100">Comprar</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUCTO -->
+          <article class="col-md-4 col-sm-6">
+            <div class="card h-100 shadow-sm">
+              <img src="../assets/img/suave.jpg" class="card-img-top" alt="Café suave">
+              <div class="card-body text-center">
+                <h5 class="card-title">Café Suave</h5>
+                <p class="card-text">Tostado medio, notas florales y taza equilibrada.</p>
+                <button class="btn btn-dark w-100">Comprar</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUCTO -->
+          <article class="col-md-4 col-sm-6">
+            <div class="card h-100 shadow-sm">
+              <img src="../assets/img/colombia.jpg" class="card-img-top" alt="Colombia">
+              <div class="card-body text-center">
+                <h5 class="card-title">Colombia de Altura</h5>
+                <p class="card-text">Sabor frutal con toque dulce y aroma envolvente.</p>
+                <button class="btn btn-dark w-100">Comprar</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+
+
+
+        <!-- SELLOS DE CALIDAD / PROCESO ---------------------------------------->
+      <section class="proceso-simple py-5 mt-5 bg-light">
+        <div class="container text-center">
+          <h2 class="mb-4">Café que nace bien</h2>
+
+          <div class="row g-4 justify-content-center">
+
+            <article class="col-md-3 col-sm-6">
+              <i class="bi bi-tree fs-1 mb-3"></i>
+              <h5>Cultivo Responsable</h5>
+            </article>
+
+            <article class="col-md-3 col-sm-6">
+              <i class="bi bi-fire fs-1 mb-3"></i>
+              <h5>Tostado Artesanal</h5>
+            </article>
+
+            <article class="col-md-3 col-sm-6">
+              <i class="bi bi-truck fs-1 mb-3"></i>
+              <h5>Entrega Rápida</h5>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      
+       
+      <!-- DESTACADO DEL MES --------------------------------------------------->
+      <section class="destacado mt-5 pt-5">
+        <div class="row align-items-center g-4">
+
+          <article class="col-md-6">
+            <img src="../assets/img/cafe peru.jpg" class="img-fluid rounded" alt="Destacado del mes">
+          </article>
+
+          <article class="col-md-6 text-center text-md-start">
+            <h2>Café del Mes – Perú Reserva</h2>
+            <p class="text-muted">
+              Un café de altura, cultivado en climas frescos y suelos volcánicos que realzan su carácter único. Su perfil presenta notas cítricas brillantes y una acidez equilibrada que se abre en cada sorbo. El tostado medio potencia sus matices sin opacar su origen, logrando un balance aromático y limpio.
+            </p>
+            <button class="btn btn-dark px-4 py-2">Comprar Ahora</button>
+          </article>
+
+        </div>
+      </section>
+
+
+    
+
+
+      <!-- SUSCRIPCIÓN --------------------------------------------------------->
+      <section class="suscripcion py-5 text-center">
+        <h2 class="mb-4">¿Querés recibir café todos los meses?</h2>
+        <p class="w-75 mx-auto mb-4">
+          Te suscribís una vez, elegís tu estilo favorito y lo tostamos especialmente para vos.
+        </p>
+        <button class="btn btn-dark px-4 py-2">Ver planes</button>
+      </section>
+
+
+    
+  </main>
+
+  <footer>
+    <p>© 2025 Café Pressé. Todos los derechos reservados.</p>
+    <p class="creditos">Hecho con ☕ en Tucuman.</p>
+  </footer> 
+
+ </body>
+ </html>

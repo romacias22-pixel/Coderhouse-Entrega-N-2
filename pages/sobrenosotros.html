@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/stilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>Sobre Nosotros</title>
+ </head>
+ <body>
+ <header class="container  py-5">
+      <div class="logo">
+        <img src="../assets/img/logo.png" alt="Logo Café Pressé">
+      
+      </div>
+
+      <!-- NAV con clase "menu" -->
+          <nav class="menu">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+
+            <!-- SUBMENÚ 1 -->
+            <li class="tiene-submenu">
+              <a href="">Productos</a>
+              <ul class="submenu">
+                <li><a href="productos.html">Café</a></li>
+                <li><a href="combos.html">Combos</a></li>
+              </ul>
+            </li>
+
+            <!-- SUBMENÚ 2 -->
+            <li class="tiene-submenu">
+              <a href="">Sobre nosotros</a>
+              <ul class="submenu">
+                <li><a href="sobrenosotros.html">Historia</a></li>
+                <li><a href="locales.html">Locales</a></li>
+              </ul>
+            </li>
+
+            <li><a href="contacto.html">Contactanos</a></li>
+            <li><a href="fyq.html">FAQ</a></li>
+          </ul>
+      </nav>
+
+      <!-- Ícono hamburguesa -->
+      <i class="fa-solid fa-bars hamburguesa"></i>
+    </header>
+ 
+  <main class="container py-5">
+
+        <!-- HERO =====================================================-->
+        <section class="row align-items-center mb-5">
+
+          <!-- Texto -->
+          <article class="col-lg-6 d-flex flex-column justify-content-center">
+            <h1 class="mb-3">Nuestra Historia</h1>
+            <p class="text-muted">
+              Café Pressé nace de la pasión por el café bien hecho, elaborado con calidad,
+              respeto por el origen y amor por el proceso artesanal. Desde 2010 trabajamos
+              con pequeños productores latinoamericanos para ofrecer una taza con identidad
+              real y trazabilidad.
+            </p>
+            <p class="text-muted">
+              Hoy tostamos cada lote cuidadosamente, buscando el equilibrio perfecto entre
+              aroma, cuerpo y personalidad.
+            </p>
+          </article>
+
+          <!-- Imagen -->
+          <article class="col-lg-6 text-center">
+            <img src="../assets/img/tostadora.jpg" class="img-fluid rounded shadow" alt="Tostador artesanal">
+          </article>
+        </section>
+
+
+        <!-- VALORES ===================================================-->
+        <section class="py-5">
+
+          <h2 class="text-center mb-5">Nuestros Valores</h2>
+
+          <div class="row g-4 justify-content-center text-center">
+
+            <article class="col-md-3 col-6 d-flex flex-column align-items-center">
+              <i class="bi bi-heart-fill fs-1 mb-3"></i>
+              <h5 class="mb-2">Pasión</h5>
+              <p>Cada café que tostamos cuenta una historia real.</p>
+            </article>
+
+            <article class="col-md-3 col-6 d-flex flex-column align-items-center">
+              <i class="bi bi-people fs-1 mb-3"></i>
+              <h5 class="mb-2">Comercio Justo</h5>
+              <p>Relaciones directas con productores y familias cafetaleras.</p>
+            </article>
+
+            <article class="col-md-3 col-6 d-flex flex-column align-items-center">
+              <i class="bi bi-recycle fs-1 mb-3"></i>
+              <h5 class="mb-2">Sustentabilidad</h5>
+              <p>Trabajamos para reducir el impacto ambiental.</p>
+            </article>
+
+            <article class="col-md-3 col-6 d-flex flex-column align-items-center">
+              <i class="bi bi-trophy fs-1 mb-3"></i>
+              <h5 class="mb-2">Excelencia</h5>
+              <p>Cada lote es testeado y catado antes de salir.</p>
+            </article>
+
+          </div>
+
+        </section>
+
+
+        <!-- GALERÍA EN GRID PURO ===============================-->
+        <section class="py-5">
+
+          <h2 class="text-center mb-4">Nuestra Cafetería</h2>
+          <p class="text-center text-muted w-75 mx-auto mb-4">
+            Un espacio donde se respira café, dedicación y comunidad.
+          </p>
+
+          <div class="galeria-grid">
+            <img src="../assets/img/interior2 (1).jpg" alt="">
+            <img src="../assets/img/interior2 (2).jpg" alt="">
+            <img src="../assets/img/taza de cafe.jpg" alt="">
+            <img src="../assets/img/granos.jpg" alt="">
+            <img src="../assets/img/coffe.jpg" alt="">
+            <img src="../assets/img/mesa.jpg" alt="">
+            <img src="../assets/img/tostadora.jpg" alt="">
+            <img src="../assets/img/coffwe.jpg" alt="">
+          </div>
+
+        </section>
+
+
+        <!-- EQUIPO (Bootstrap + Cards) ================================-->
+        <section class="py-5">
+
+          <h2 class="text-center mb-5">Nuestro Equipo</h2>
+
+          <div class="row g-4 justify-content-center">
+
+            <article class="col-md-4 col-sm-6">
+              <div class="card h-100 text-center shadow-sm">
+                <img src="../assets/img/barista1.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title mb-1">Sofía Ramírez</h5>
+                  <p class="text-muted mb-0">Fundadora & Maestra Tostadora</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col-md-4 col-sm-6">
+              <div class="card h-100 text-center shadow-sm">
+                <img src="../assets/img/catador.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title mb-1">Julio Fernández</h5>
+                  <p class="text-muted mb-0">Catador Q-Grader</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col-md-4 col-sm-6">
+              <div class="card h-100 text-center shadow-sm">
+                <img src="../assets/img/barista2.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title mb-1">Lucía Gómez</h5>
+                  <p class="text-muted mb-0">Barista & Comunidad</p>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+        </section>
+
+
+        <!-- CTA FINAL =================================================-->
+        <section class="py-5 text-center">
+          <h2 class="mb-3">¿Querés probar nuestros cafés?</h2>
+          <p class="text-muted mb-4">Tostados artesanalmente cada semana.</p>
+
+          <a href="productos.html" class="btn btn-dark px-4 py-2">
+            Ver Productos
+          </a>
+        </section>
+
+ </main>
+ 
+
+
+
+  <footer>
+    <p>© 2025 Café Pressé. Todos los derechos reservados.</p>
+    <p class="creditos">Hecho con ☕ en Tucuman.</p>
+  </footer> 
+
+ </body>
+ </html>
