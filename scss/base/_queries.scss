@@ -1,0 +1,75 @@
+
+/* =====================================
+    RESPONSIVE MENU HAMBURGUESA
+===================================== */
+@media (max-width: 991px) {
+  header {
+    .hamburguesa {
+      display: block !important;
+    }
+
+    .menu {
+      display: none;
+    }
+  }
+}
+
+
+/* =====================================
+   RESPONSIVE FAQ – GRID Y FLEX
+===================================== */
+@media (max-width: 998px) {
+  .faq-grid {
+    grid-template-columns: 1fr; // Una columna
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .faq-pregunta {
+    span {
+      font-size: 18px;
+    }
+
+    h5 {
+      font-size: 1rem;
+    }
+  }
+
+  .faq-item {
+    padding-bottom: 10px;
+  }
+}
+
+/* =====================================
+   RESPONSIVE MAIN GRID – MOODBOARD
+===================================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .grid-fotos {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "a a"
+      "b c"
+      "d e";
+  }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+  .grid-fotos {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d"
+      "e";
+  }
+}

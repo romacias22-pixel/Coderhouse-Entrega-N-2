@@ -1,0 +1,27 @@
+
+/* ============================
+   IMPORTACIONES
+============================== */
+
+@use '../base/generales';
+@use '../base/queries';
+
+@use "sass:map";
+@use '../utilities/maps' as *;
+@use '../utilities/extend';
+@use '../utilities/mixin' as mixin;
+
+/* SECCIONES */
+@use '../sections/header';
+@use '../sections/main';
+@use '../sections/footer';
+
+/* PÁGINAS */
+@use "../pages/productos";
+
+
+
+
+/*# sourceMappingURL=stilos.css.map */
+
+ 

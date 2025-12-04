@@ -1,0 +1,82 @@
+@use "sass:map";
+@use '../utilities/maps' as *;
+
+/* =====================================
+   ESTILOS GENERALES
+===================================== */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: map.get($colores, terciario);
+  background-color: #f9fafc;
+}
+
+
+/* =====================================
+   ESTILOS GENERALES
+===================================== */
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: map.get($colores, terciario);        // texto gris oscuro
+  background-color: map.get($colores, primario); // fondo blanco
+}
+
+/* =====================================
+   BOTONES (SIN BOOTSTRAP)
+===================================== */
+
+.botones {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+
+  .principal {
+    background: map.get($colores, secundario);  // negro
+    color: map.get($colores, primario);         // blanco
+    padding: 10px 25px;
+    border-radius: 7px;
+    border: none;
+    transition: 0.3s;
+
+    &:hover {
+      background: map.get($colores, terciario); // gris oscuro
+    }
+  }
+
+  .secundario {
+    background: transparent;
+    color: map.get($colores, secundario);       // negro
+    border: 2px solid map.get($colores, terciario);
+    padding: 10px 25px;
+    border-radius: 7px;
+    transition: 0.3s;
+
+    &:hover {
+      background: map.get($colores, terciario); // gris oscuro
+      color: map.get($colores, primario);       // blanco
+    }
+  }
+}
+
+
+/* =====================================
+   IMAGEN HERO
+===================================== */
+
+.imagen {
+  --animate-duration: 1.5s;
+  --animate-distance: 10px;
+
+  img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 8px 35px rgba(0,0,0,0.09);
+  }
+}

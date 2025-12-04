@@ -1,0 +1,30 @@
+@use "sass:map";
+@use '../utilities/maps' as *;
+
+
+/* ============================
+   PLACEHOLDERS (EXTENDS)
+=============================== */
+
+/* Base para cualquier card */
+%card-base {
+  background: map.get($colores, primario);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+/* Sube un poco en hover */
+%hover-lift {
+  &:hover {
+    transform: translateY(-6px);
+  }
+}
+
+/* Hover con sombra genérica */
+%hover-shadow {
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+}

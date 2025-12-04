@@ -1,0 +1,201 @@
+@use "sass:map";
+@use "../utilities/maps" as *;
+@use "../utilities/mixin" as mixin;
+@use "../utilities/extend";
+
+/* =====================================
+   SECCIÓN VENTAJAS – TARJETAS
+===================================== */
+.ventaja-card {
+  @extend %card-base;
+  @extend %hover-shadow;
+
+  background: map.get($colores, primario);
+  border: 1px solid map.get($colores, borde-ventaja);
+
+  &:hover {
+    box-shadow: 0 10px 30px map.get($colores, sombra-media);
+  }
+}
+
+/* =====================================
+   GRID MOODBOARD
+===================================== */
+.grid-fotos {
+  display: grid;
+  gap: 15px;
+  grid-template-areas:
+    "a a b c"
+    "a a d e";
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.3s;
+
+    &:nth-child(1) { grid-area: a; }
+    &:nth-child(2) { grid-area: b; }
+    &:nth-child(3) { grid-area: c; }
+    &:nth-child(4) { grid-area: d; }
+    &:nth-child(5) { grid-area: e; }
+
+    &:hover {
+      transform: scale(1.03);
+      filter: brightness(1.05);
+    }
+  }
+}
+
+/* =====================================
+   CARDS DE PRODUCTOS
+===================================== */
+
+.card-producto {
+  @extend %card-base;
+  @extend %hover-lift;
+
+  background: map.get($colores, primario);
+  border: 1px solid map.get($colores, borde-producto);
+
+  &:hover {
+    box-shadow: 0 10px 25px map.get($colores, sombra-media);
+  }
+
+  .card-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+  }
+
+  .principal {
+    background: map.get($colores, azul-boton);
+    color: map.get($colores, primario);
+    padding: 10px 25px;
+    border-radius: 8px;
+    border: none;
+  }
+}
+
+/* =====================================
+   GALERÍA HISTORIA (GRID)
+===================================== */
+.galeria-grid {
+  display: grid;
+  gap: 15px;
+  grid-template-areas:
+    "a a b c"
+    "a a d e";
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+}
+
+/* =====================================
+   CARD LOCALES
+===================================== */
+.local-card {
+  @extend %hover-lift;
+
+  &:hover {
+    box-shadow: 0 12px 25px map.get($colores, sombra-12);
+  }
+}
+
+/* =====================================
+   FAQ – GRID Y FLEX
+===================================== */
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    min-height: 350px;
+
+    .faq-item {
+      border-bottom: 1px solid map.get($colores, borde-faq);
+      padding-bottom: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+      padding: 10px 0;
+
+      .faq-pregunta {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 15px;
+
+        span {
+          font-size: 20px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+/* =====================================
+   FAQ – ESTILOS PERSONALIZADOS ACORDEÓN
+===================================== */
+
+.accordion-button {
+  background: map.get($colores, primario);
+  color: map.get($colores, cuartario);
+  box-shadow: none !important;
+
+  // Estado abierto
+  &:not(.collapsed) {
+    background: map.get($colores, borde-faq) !important;
+    color: map.get($colores, secundario) !important;
+
+    &::after {
+      filter: invert(0);
+    }
+  }
+}
+
+.accordion-item {
+  border: none;
+  background: transparent;
+}
+
+
+/* =====================================
+   FORMULARIO CONTACTO
+===================================== */
+form {
+  label {
+    font-weight: 500;
+  }
+
+  button {
+    border-radius: 8px;
+  }
+}
+
+/* =====================================
+   CARDS
+===================================== */
+.card {
+  @include mixin.card-style(map.get($colores, primario), map.get($colores, borde-producto));
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px map.get($colores, sombra-18);
+  }
+}

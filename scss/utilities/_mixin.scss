@@ -1,0 +1,9 @@
+/* =====================================
+   MIXINS
+===================================== */
+@mixin card-style($bg-color, $border-color, $padding: 16px, $radius: 12px) {
+  background: $bg-color;
+  border: 1px solid $border-color;
+  padding: $padding;
+  border-radius: $radius;
+}

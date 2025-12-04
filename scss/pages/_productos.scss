@@ -1,0 +1,9 @@
+@use "../utilities/mixin" as mixin;
+@use "sass:map";
+@use "../utilities/maps" as *;
+
+
+.suscripcion.animate__animated {
+  --animate-duration: 1.4s;
+ 
+}

@@ -14,6 +14,7 @@
     />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 
     <title>Café Pressé</title>
@@ -76,12 +77,15 @@
 
           <div class="botones d-flex gap-3">
             <button class="principal">Ver menú</button>
-            <button class="secundario">Conocé nuestra historia</button>
+              <button class="secundario" onclick="window.location.href='pages/sobrenosotros.html'">
+                Conocé nuestra historia
+               </button>
+
           </div>
         </section>
 
         <!-- IMAGEN -->
-        <section class="imagen col-lg-6 text-center">
+        <section class="imagen col-lg-6 text-center animate__animated animate__zoomIn">
           <img src="assets/img/Café Pressé.png" alt="Café artesanal">
         </section>
 
@@ -108,7 +112,7 @@
                 </div>
               </div>
 
-              <div class="col-md-4 col-sm-6">
+              <div class="col-md-4 col-sm-6 ">
                 <div class="ventaja-card p-4 h-100">
                   <i class="bi bi-fire fs-1 mb-3"></i>
                   <h4>Tostado artesanal</h4>
@@ -153,11 +157,11 @@
             Descubrí el café perfecto para tus mañanas.
           </p>
 
-          <div class="row g-4 justify-content-center">
+          <div class="row g-4 justify-content-center ">
 
             <!-- Producto 1 -->
-            <div class="col-md-4 col-sm-6">
-              <div class="card h-100 shadow-sm">
+            <div class="col-md-4 col-sm-6 animate__animated animate__fadeIn">
+              <div class="card h-100 shadow-sm" >
                 <img src="assets/img/blendintenso.jpg" class="card-img-top" alt="Café Intenso">
                 <div class="card-body">
                   <h5 class="card-title">Blend Intenso</h5>
@@ -169,7 +173,7 @@
             </div>
 
             <!-- Producto 2 -->
-            <div class="col-md-4 col-sm-6">
+            <div class="col-md-4 col-sm-6 animate__animated animate__fadeIn">
               <div class="card h-100 shadow-sm">
                 <img src="assets/img/suave.jpg" class="card-img-top" alt="Café Suave">
                 <div class="card-body">
@@ -182,7 +186,7 @@
             </div>
 
             <!-- Producto 3 -->
-            <div class="col-md-4 col-sm-6">
+            <div class="col-md-4 col-sm-6 animate__animated animate__fadeIn">
               <div class="card h-100 shadow-sm">
                 <img src="assets/img/colombia.jpg" class="card-img-top" alt="Café de Origen">
                 <div class="card-body">

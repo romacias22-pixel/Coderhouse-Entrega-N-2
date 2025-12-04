@@ -1,3 +1,420 @@
+@charset "UTF-8";
+/* ============================
+   IMPORTACIONES
+============================== */
+/* =====================================
+   ESTILOS GENERALES
+===================================== */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #2c2c2c;
+  background-color: #f9fafc;
+}
 
+/* =====================================
+   ESTILOS GENERALES
+===================================== */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #2c2c2c;
+  background-color: #ffffff;
+}
+
+/* =====================================
+   BOTONES (SIN BOOTSTRAP)
+===================================== */
+.botones {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.botones .principal {
+  background: #000000;
+  color: #ffffff;
+  padding: 10px 25px;
+  border-radius: 7px;
+  border: none;
+  transition: 0.3s;
+}
+.botones .principal:hover {
+  background: #2c2c2c;
+}
+.botones .secundario {
+  background: transparent;
+  color: #000000;
+  border: 2px solid #2c2c2c;
+  padding: 10px 25px;
+  border-radius: 7px;
+  transition: 0.3s;
+}
+.botones .secundario:hover {
+  background: #2c2c2c;
+  color: #ffffff;
+}
+
+/* =====================================
+   IMAGEN HERO
+===================================== */
+.imagen {
+  --animate-duration: 1.5s;
+  --animate-distance: 10px;
+}
+.imagen img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.09);
+}
+
+/* =====================================
+    RESPONSIVE MENU HAMBURGUESA
+===================================== */
+@media (max-width: 991px) {
+  header .hamburguesa {
+    display: block !important;
+  }
+  header .menu {
+    display: none;
+  }
+}
+/* =====================================
+   RESPONSIVE FAQ – GRID Y FLEX
+===================================== */
+@media (max-width: 998px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .faq-pregunta span {
+    font-size: 18px;
+  }
+  .faq-pregunta h5 {
+    font-size: 1rem;
+  }
+  .faq-item {
+    padding-bottom: 10px;
+  }
+}
+/* =====================================
+   RESPONSIVE MAIN GRID – MOODBOARD
+===================================== */
+/* Tablets */
+@media (max-width: 1024px) {
+  .grid-fotos {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "a a" "b c" "d e";
+  }
+}
+/* Móviles */
+@media (max-width: 768px) {
+  .grid-fotos {
+    grid-template-columns: 1fr;
+    grid-template-areas: "a" "b" "c" "d" "e";
+  }
+}
+/* ============================
+   PLACEHOLDERS (EXTENDS)
+=============================== */
+/* Base para cualquier card */
+.ventaja-card, .card-producto {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+/* Sube un poco en hover */
+.card-producto:hover, .local-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Hover con sombra genérica */
+.ventaja-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* =====================================
+   MIXINS
+===================================== */
+/* SECCIONES */
+/* =====================================
+   HEADER (FLEX PROPIO)
+===================================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 90px;
+  /* =====================================
+     MENÚ DESKTOP (FLEX NATIVO)
+  ====================================== */
+  /* OCULTO EN DESKTOP */
+}
+header .logo {
+  display: flex;
+  align-items: center;
+}
+header .logo img {
+  width: 200px;
+  height: 200px;
+}
+header .menu ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+header .menu ul li {
+  position: relative;
+  /* =====================================
+     SUBMENÚ (SIN BOOTSTRAP)
+  ====================================== */
+}
+header .menu ul li a {
+  text-decoration: none;
+  color: #2c2c2c;
+}
+header .menu ul li ul.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+  padding: 10px 0;
+  list-style: none;
+  min-width: 160px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  gap: 10px;
+}
+header .menu ul li ul.submenu li a {
+  padding: 8px 15px;
+  display: block;
+}
+header .menu ul li ul.submenu li a:hover {
+  background-color: #f1f3f6;
+}
+header .menu ul li:hover > ul.submenu {
+  display: flex;
+}
+header .hamburguesa {
+  font-size: 30px;
+  display: none;
+  cursor: pointer;
+  color: #2c2c2c;
+}
+
+/* =====================================
+   SECCIÓN VENTAJAS – TARJETAS
+===================================== */
+.ventaja-card {
+  background: #ffffff;
+  border: 1px solid #e1e6f0;
+}
+.ventaja-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* =====================================
+   GRID MOODBOARD
+===================================== */
+.grid-fotos {
+  display: grid;
+  gap: 15px;
+  grid-template-areas: "a a b c" "a a d e";
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+}
+.grid-fotos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+.grid-fotos img:nth-child(1) {
+  grid-area: a;
+}
+.grid-fotos img:nth-child(2) {
+  grid-area: b;
+}
+.grid-fotos img:nth-child(3) {
+  grid-area: c;
+}
+.grid-fotos img:nth-child(4) {
+  grid-area: d;
+}
+.grid-fotos img:nth-child(5) {
+  grid-area: e;
+}
+.grid-fotos img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+
+/* =====================================
+   CARDS DE PRODUCTOS
+===================================== */
+.card-producto {
+  background: #ffffff;
+  border: 1px solid #e8ecf3;
+}
+.card-producto:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+.card-producto .card-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+.card-producto .principal {
+  background: #3c4a64;
+  color: #ffffff;
+  padding: 10px 25px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* =====================================
+   GALERÍA HISTORIA (GRID)
+===================================== */
+.galeria-grid {
+  display: grid;
+  gap: 15px;
+  grid-template-areas: "a a b c" "a a d e";
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+}
+.galeria-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* =====================================
+   CARD LOCALES
+===================================== */
+.local-card:hover {
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* =====================================
+   FAQ – GRID Y FLEX
+===================================== */
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+.faq-grid .faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  min-height: 350px;
+}
+.faq-grid .faq-list .faq-item {
+  border-bottom: 1px solid #d5d9e4;
+  padding-bottom: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 10px 0;
+}
+.faq-grid .faq-list .faq-item .faq-pregunta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 15px;
+}
+.faq-grid .faq-list .faq-item .faq-pregunta span {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* =====================================
+   FAQ – ESTILOS PERSONALIZADOS ACORDEÓN
+===================================== */
+.accordion-button {
+  background: #ffffff;
+  color: #f1f3f6;
+  box-shadow: none !important;
+}
+.accordion-button:not(.collapsed) {
+  background: #d5d9e4 !important;
+  color: #000000 !important;
+}
+.accordion-button:not(.collapsed)::after {
+  filter: invert(0);
+}
+
+.accordion-item {
+  border: none;
+  background: transparent;
+}
+
+/* =====================================
+   FORMULARIO CONTACTO
+===================================== */
+form label {
+  font-weight: 500;
+}
+form button {
+  border-radius: 8px;
+}
+
+/* =====================================
+   CARDS
+===================================== */
+.card {
+  background: #ffffff;
+  border: 1px solid #e8ecf3;
+  padding: 16px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* =====================================
+   FOOTER (FLEX PROPIO)
+===================================== */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0;
+  text-align: center;
+  background: #f1f3f6;
+  color: #2c2c2c;
+}
+footer .creditos {
+  margin-top: 5px;
+  font-size: 13px;
+  color: #2c2c2c;
+}
+
+/* PÁGINAS */
+.suscripcion.animate__animated {
+  --animate-duration: 1.4s;
+}
 
 /*# sourceMappingURL=stilos.css.map */

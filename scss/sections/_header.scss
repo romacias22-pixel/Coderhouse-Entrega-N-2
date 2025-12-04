@@ -1,0 +1,87 @@
+@use "sass:map";
+@use '../utilities/maps' as *;
+
+/* =====================================
+   HEADER (FLEX PROPIO)
+===================================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 90px;
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  /* =====================================
+     MENÚ DESKTOP (FLEX NATIVO)
+  ====================================== */
+  .menu {
+    ul {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        position: relative;
+
+        a {
+          text-decoration: none;
+          color: map.get($colores, terciario); // antes #2f3b52
+        }
+
+        /* =====================================
+           SUBMENÚ (SIN BOOTSTRAP)
+        ====================================== */
+        ul.submenu {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background: rgba(255,255,255,0.95);
+          backdrop-filter: blur(4px);
+          padding: 10px 0;
+          list-style: none;
+          min-width: 160px;
+          border-radius: 10px;
+          box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+          flex-direction: column;
+          gap: 10px;
+
+          li {
+            a {
+              padding: 8px 15px;
+              display: block;
+
+              &:hover {
+                background-color: map.get($colores, cuartario); 
+              }
+            }
+          }
+        }
+
+        &:hover > ul.submenu {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  /* OCULTO EN DESKTOP */
+ .hamburguesa {
+  font-size: 30px;
+  display: none;
+  cursor: pointer;
+  color: map.get($colores, terciario);
+}
+
+}
